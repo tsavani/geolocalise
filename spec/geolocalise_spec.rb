@@ -14,7 +14,7 @@ describe Geolocalise do
     Geolocalise.get_city("19.075as, Mumbai").should == nil
   end
 
-   # Testing geolocalise and should return exact state name when input in [geocords or city,state name]
+  # Testing geolocalise and should return exact state name when input in [geocords or city,state name]
   it "should return state" do
     Geolocalise.get_state("Mumbai").should == "Maharashtra"
   end
@@ -27,20 +27,20 @@ describe Geolocalise do
     Geolocalise.get_state("19.07598, 72.8776559").should == "Maharashtra"
   end
 
-    # Testing geolocalise and should return exact country name when input in [geocords or city,state name]
+  # Testing geolocalise and should return exact Country name when input in [geocords or city,state name]
   it "should return country" do
     Geolocalise.get_country("19.0759837, 72.8776559").should == "India"
   end
 
   it "should return country error" do 
-    Geolocalise.get_state("Gujarat, 72.8776559").should == nil
+    Geolocalise.get_country("Gujarat, 72.8776559").should == nil
   end
 
   it "should return country by coords" do 
-    Geolocalise.get_state("19.07598, 72.8776559").should == "Maharashtra"
+    Geolocalise.get_country("19.07598, 72.8776559").should == "India"
   end
 
-    # Testing geolocalise and should return exact Country Code when input as [geocords or city,state and country name]
+  # Testing geolocalise and should return exact Country Code when input as [geocords or city,state and country name]
   it "should return get country code" do
     Geolocalise.get_country_code("19.0759837, 72.8776559").should == "IN"
   end
@@ -53,7 +53,7 @@ describe Geolocalise do
     Geolocalise.get_country_code("19.07598, 72.8776559").should == "IN"
   end
 
-   # Testing geolocalise and should return exact Country Code when input as [geocords or city,state and country name]
+  # Testing geolocalise and should return exact Postal Code when input as [geocords or city,state and country name]
   it "should return get postal code" do
     Geolocalise.get_postal_code("Surat").should == "395007"
   end
