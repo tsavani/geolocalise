@@ -8,7 +8,7 @@ module Geolocalise
      if (location =~ /[[:digit:]]/) == nil
     	Geocoder.search(location).first.city
      else
-    	check_geo_cords(location) ? Geocoder.search(location).first.city : "Please Enter proper co-ordinates"
+    	check_geo_cords(location) ? Geocoder.search(location).first.city : nil
   	end
      #check_geo_cords(location) ? Geocoder.search(location).first.city : "Please Enter proper co-ordinates"
   end
@@ -18,7 +18,7 @@ module Geolocalise
     if (location =~ /[[:digit:]]/) == nil
     	Geocoder.search(location).first.country
     else
-    	check_geo_cords(location) ? Geocoder.search(location).first.country : "Please Enter proper co-ordinates"
+    	check_geo_cords(location) ? Geocoder.search(location).first.country : nil
   	end
   end
 
@@ -27,7 +27,7 @@ module Geolocalise
     if (location =~ /[[:digit:]]/) == nil
     	Geocoder.search(location).first.state
     else
-      check_geo_cords(location) ? Geocoder.search(location).first.state : "Please Enter proper co-ordinates"
+      check_geo_cords(location) ? Geocoder.search(location).first.state : nil
   	end
   end
 
@@ -36,7 +36,7 @@ module Geolocalise
     if (location =~ /[[:digit:]]/) == nil
     	Geocoder.search(location).first.country_code
     else
-      check_geo_cords(location) ? Geocoder.search(location).first.country_code : "Please Enter proper co-ordinates"
+      check_geo_cords(location) ? Geocoder.search(location).first.country_code : nil
   	end
   end
 
@@ -47,10 +47,10 @@ module Geolocalise
     	Geocoder.search(Geocoder.coordinates(location).map(&:inspect).join(',')).first.postal_code
     else
     #Geocoder.search(Geocoder.coordinates(location).map(&:inspect).join(',')).first.postal_code
-    check_geo_cords(location) ? Geocoder.search(location).first.postal_code : "Please Enter proper co-ordinates"
+    check_geo_cords(location) ? Geocoder.search(location).first.postal_code : nil
     end
   end
-  
+
   private
 
     def self.check_geo_cords(location)

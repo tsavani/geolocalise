@@ -11,7 +11,7 @@ describe Geolocalise do
   end
 
   it "should return error" do 
-  	Geolocalise.get_city("19.075as, Mumbai").should == "Please Enter proper co-ordinates"
+  	Geolocalise.get_city("19.075as, Mumbai").should == nil
   end
 
    # Testing geolocalise and should return exact state name when input in [geocords or city,state name]
@@ -20,7 +20,7 @@ describe Geolocalise do
   end
 
    it "should return state error" do 
-  	Geolocalise.get_state("Mumbai, 72.8776559").should == "Please Enter proper co-ordinates"
+  	Geolocalise.get_state("Mumbai, 72.8776559").should == nil
   end
 
    it "should return state by coords" do 
@@ -33,7 +33,7 @@ describe Geolocalise do
    end
 
    it "should return country error" do 
-  	Geolocalise.get_state("Gujarat, 72.8776559").should == "Please Enter proper co-ordinates"
+  	Geolocalise.get_state("Gujarat, 72.8776559").should == nil
    end
 
    it "should return country by coords" do 
@@ -46,7 +46,7 @@ describe Geolocalise do
   end
 
    it "should return country error" do 
-  	Geolocalise.get_country_code("Gujarat, 72.8776559").should == "Please Enter proper co-ordinates"
+  	Geolocalise.get_country_code("Gujarat, 72.8776559").should == nil
    end
 
    it "should return country by coords" do 
@@ -63,7 +63,7 @@ describe Geolocalise do
    end
 
    it "should return erorr when cords is not proper" do 
-  	Geolocalise.get_postal_code("19.07598, mumbai").should == "Please Enter proper co-ordinates"
+  	Geolocalise.get_postal_code("19.07598, mumbai").should == nil
    end
    
 end
