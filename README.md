@@ -22,7 +22,45 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To get city name from latitude and langitude
+```ruby
+Geolocalise.get_city("19.07598, 72.8776559")
+#=> "Mumbai"
+``` 
+
+To get state name form city or co-ordinates
+```ruby
+Geolocalise.get_state("19.07598, 72.8776559")
+#=> "Maharashtra"
+
+Geolocalise.get_state("Mumbai")
+#=> "Maharashtra"
+``` 
+To get country name form city or co-ordinates
+```ruby
+Geolocalise.get_country("19.07598, 72.8776559")
+#=> "India"
+
+Geolocalise.get_country("Delhi")
+#=> "India"
+```
+
+To get country code form city or co-ordinates
+```ruby
+Geolocalise.get_country_code("19.0759837, 72.8776559")
+#=> "IN"
+
+Geolocalise.get_country_code("Ahmedabad")
+#=> "IN"
+```
+To get postal pode form city or co-ordinates
+```ruby
+Geolocalise.get_postal_code("19.07598, 72.8776559")
+#=> "400070"
+
+Geolocalise.get_postal_code("Surat")
+#=>"395007"
+```
 
 ## Development
 

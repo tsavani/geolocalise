@@ -29,7 +29,7 @@ describe Geolocalise do
 
   # Testing geolocalise and should return exact Country name when input in [geocords or city,state name]
   it "should return country" do
-    Geolocalise.get_country("19.0759837, 72.8776559").should == "India"
+    Geolocalise.get_country("Delhi").should == "India"
   end
 
   it "should return country error" do 
@@ -42,7 +42,7 @@ describe Geolocalise do
 
   # Testing geolocalise and should return exact Country Code when input as [geocords or city,state and country name]
   it "should return get country code" do
-    Geolocalise.get_country_code("19.0759837, 72.8776559").should == "IN"
+    	.should == "IN"
   end
 
   it "should return country error" do 
