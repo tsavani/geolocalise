@@ -22,6 +22,7 @@ Or install it yourself as:
 ## Usage
 
 In your class -
+
     $ require 'password_mate'
 
 There are mainly five helpers available for Geolocalise usage.
