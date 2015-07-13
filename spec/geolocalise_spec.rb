@@ -42,7 +42,7 @@ describe Geolocalise do
 
   # Testing geolocalise and should return exact Country Code when input as [geocords or city,state and country name]
   it "should return get country code" do
-    	.should == "IN"
+    Geolocalise.get_country_code("New York").should == "US"
   end
 
   it "should return country error" do 
@@ -55,8 +55,9 @@ describe Geolocalise do
 
   # Testing geolocalise and should return exact Postal Code when input as [geocords or city,state and country name]
   it "should return get postal code" do
-    Geolocalise.get_postal_code("Surat").should == "395007"
+    Geolocalise.get_postal_code("New York").should == "10007"
   end
+
   
   it "should return postal cords by coords" do 
     Geolocalise.get_postal_code("19.07598, 72.8776559").should == "400070"

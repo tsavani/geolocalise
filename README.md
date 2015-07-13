@@ -54,16 +54,16 @@ To get country code form city or co-ordinates
 Geolocalise.get_country_code("19.0759837, 72.8776559")
 #=> "IN"
 
-Geolocalise.get_country_code("Ahmedabad")
-#=> "IN"
+Geolocalise.get_country_code("New York")
+#=> "US"
 ```
 To get postal pode form city or co-ordinates
 ```ruby
 Geolocalise.get_postal_code("19.07598, 72.8776559")
 #=> "400070"
 
-Geolocalise.get_postal_code("Surat")
-#=>"395007"
+Geolocalise.get_postal_code("New York")
+#=>"10007"
 ```
 
 ## Contributing
