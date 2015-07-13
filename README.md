@@ -23,7 +23,7 @@ Or install it yourself as:
 
 In your class -
 
-    $ require 'password_mate'
+    $ require 'geolocalise'
 
 There are mainly five helpers available for Geolocalise usage.
 To get city name from latitude and langitude
